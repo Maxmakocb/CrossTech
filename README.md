@@ -31,7 +31,6 @@ curl -Method Get http://localhost:8080/track?id=0
 curl -Method Post http://localhost:8080/track?entry='{"track_id": 0, "source": "custom_source", "target": "custom_target"}'
 3) DELETE
 curl -Method Delete http://localhost:8080/track?id=0
-
 DELETE of a track will cause all the signals, referencing that particular track to be deleted too
 4) PUT
 curl -Method Put "http://localhost:8080/track?id=0&typ=source&value=new_custom_source"
