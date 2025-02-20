@@ -1,0 +1,22 @@
+database: cross_tech
+
+// Table creation
+
+CREATE TABLE track (
+    track_id INT NOT NULL UNIQUE PRIMARY KEY,
+    source VARCHAR(100) NOT NULL,
+    target VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE signal_id (
+    uuid INT NOT NULL UNIQUE PRIMARY KEY,
+    signal_id INT,
+    track_id INT,
+    signal_name VARCHAR(100),
+    elr VARCHAR(100),
+    mileage FLOAT,
+    CONSTRAINT fk_track_id
+        FOREIGN KEY (track_id)
+        REFERENCES track (track_id)
+        ON DELETE CASCADE
+);
