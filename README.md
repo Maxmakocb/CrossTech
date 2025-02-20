@@ -1,3 +1,6 @@
+Video demonstration (access only via link):
+https://youtu.be/oxzV1TnHnS8
+
 Configuration:
 set database connection parameters in database/datagase.go file
 
